@@ -18,7 +18,7 @@ const LeftBody = ({ eU, handelWatchTime }) => {
               </div>
             </div>
             <div className="flex items-center mr-4">
-              <span className="text-gray-500 text-base font-normal p-1 mr-2">{read_time} read</span>
+              <span className="text-gray-500 text-base font-normal p-1 mr-2">{read_time} mins read</span>
 
               <svg
                 onClick={()=> handelWatchTime(read_time)}
