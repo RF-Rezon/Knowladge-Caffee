@@ -1,17 +1,19 @@
-import { useState } from 'react';
+import Nav from './Components/Nav';
+import RightBody from './Components/Right-Body';
 import Noname from './Components/noname';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const handelWatchTime =(time)=> {
+    console.log(time);
+  }
   return (
     <div className="App max-w-7xl mx-auto">
-     {/* <Header />
-     <div className='flex'>
-    <LeftBody/>
-    <RightBody />
-     </div> */}
-     <Noname />
+    <Nav/>
+     <div className='flex flex-col md:flex-row'>
+     <Noname  handelWatchTime={handelWatchTime}/>   
+     {/* Dynamic Left body */}
+     <RightBody/>
+     </div>
     </div>
   )
 }

@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import LeftBody from './Left-Body';
 
-const Noname = () => {
-    const [count, setCount] = useState([]); 
+const Noname = ({handelWatchTime}) => {
+    const [user, setUser] = useState([]); 
     useEffect(()=>{
         fetch("../../fakeJson.json")
         .then(res => res.json())
-        .then(data => fetchData(data))
-    })
-    function fetchData (info){
-      console.log(info)
-    }
+        .then(data => setUser(data.data))
+    },[]);
+
+    
+
+    const fetchData = user.map(eU => 
+        <LeftBody key={eU.id} eU={eU} handelWatchTime={handelWatchTime}></LeftBody>
+        );
+    
     return (
         <div>
-            
+        {fetchData}
+        
+           
         </div>
     );
 };
