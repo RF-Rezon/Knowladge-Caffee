@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import LeftBody from './Left-Body';
 
-const Noname = ({handelWatchTime}) => {
+const Noname = ({handelWatchTime, handelBookmarks}) => {
     const [user, setUser] = useState([]); 
     useEffect(()=>{
         fetch("../../fakeJson.json")
@@ -12,7 +12,7 @@ const Noname = ({handelWatchTime}) => {
     
 
     const fetchData = user.map(eU => 
-        <LeftBody key={eU.id} eU={eU} handelWatchTime={handelWatchTime}></LeftBody>
+        <LeftBody key={eU.id} eU={eU} handelWatchTime={handelWatchTime} handelBookmarks={handelBookmarks}></LeftBody>
         );
     
     return (

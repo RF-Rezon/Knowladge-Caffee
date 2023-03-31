@@ -1,7 +1,7 @@
 import React from "react";
 
-const LeftBody = ({ eU, handelWatchTime }) => {
-  const { author_name, blog_title, images, read_time, publish_date } = eU;
+const LeftBody = ({ eU, handelWatchTime,handelBookmarks }) => {
+  const {id, author_name, blog_title, images, read_time, publish_date } = eU;
   return (
     <div className="md:h-[821px] md:w-[845px] container">
       <div id="card" className="basis-1/3 flex flex-col rounded-md bg-gray-100 pb-5 drop-shadow-xl">
@@ -21,7 +21,7 @@ const LeftBody = ({ eU, handelWatchTime }) => {
               <span className="text-gray-500 text-base font-normal p-1 mr-2">{read_time} mins read</span>
 
               <svg
-                
+                onClick={()=> handelBookmarks(blog_title)}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
