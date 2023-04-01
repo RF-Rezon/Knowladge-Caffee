@@ -1,16 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 
 const TitleShows = ({e}) => {
-    
-    console.log(e)
-    const [title, setTitle] = useState([]);
-    useEffect(()=>{
-    
-    },[])
-
-
-
     return (
         <div>
             <div className="bg-white rounded-2xl h-[98px] w-[350px] mx-auto my-6 flex justify-center items-center">

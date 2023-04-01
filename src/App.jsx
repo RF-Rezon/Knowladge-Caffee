@@ -43,7 +43,7 @@ function App() {
      <div className='flex flex-col md:flex-row'>
      <Noname  handelWatchTime={handelWatchTime} handelBookmarks={handelBookmarks}/>   
      {/* Dynamic Left body */}
-     <RightBody watchtime={watchtime} bookmark={bookmark}/>
+     <RightBody watchtime={watchtime} bookmark={bookmark} count={bookmark.length}/>
      </div>
      <Blog/>
      <ToastContainer></ToastContainer>

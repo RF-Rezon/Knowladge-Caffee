@@ -18,7 +18,7 @@ const LeftBody = ({ eU, handelWatchTime,handelBookmarks }) => {
               </div>
             </div>
             <div className="flex items-center mr-4">
-              <span className="text-gray-500 text-base font-normal p-1 mr-2">{read_time} mins read</span>
+              <span className="text-zinc-600 text-base font-semibold p-1 mr-2">{read_time} mins to read</span>
 
               <svg
                 onClick={()=> handelBookmarks(eU)}
@@ -44,7 +44,7 @@ const LeftBody = ({ eU, handelWatchTime,handelBookmarks }) => {
             <span className="text-gray-500 text-sm underline font-semibold p-3 mr-2">#programming</span> <br />
             <div className="my-3">
               <div onClick={()=> handelWatchTime(read_time)} className="cursor-pointer" >
-                <p className="text-purple-700 text-sm underline font-semibold">Mark as read</p>
+                <p className="text-zinc-800 text-sm underline font-semibold">Mark as read</p>
               </div>
             </div>
           </div>

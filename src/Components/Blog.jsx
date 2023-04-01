@@ -5,7 +5,7 @@ const Blog = () => {
     <div className="cursor-default">
       <div className="rounded-md bg-gray-100 p-5 drop-shadow-xl mb-8">
           <p className="font-bold text-4xl my-1 mb-5 pt-3">Props vs State</p>
-          <p className="font-semibold text-gray-800 text-xl my-2">
+          <p className="font-semibold text-zinc-800 text-xl my-2">
             Props and state are both ways to manage data in React components, but they serve different purposes. Props
             (short for "properties") are used to pass data from a parent component to a child component. They are read-only
             and cannot be modified by the child component. Props are typically used for static data that doesn't change
@@ -18,7 +18,7 @@ const Blog = () => {
       </div>
       <div  className="rounded-md bg-gray-100 p-5 drop-shadow-xl mb-8">
           <p className="font-bold text-4xl my-1 mb-5 pt-3">How does useState work?</p>
-          <p className="font-semibold text-gray-800 text-xl my-2">
+          <p className="font-semibold text-zinc-800 text-xl my-2">
           
             the useState hook is used to manage state within functional components. It takes an initial value as an argument
             and returns an array containing the current state value and a function to update the state. Here's how the
@@ -29,8 +29,8 @@ const Blog = () => {
           </p>
       </div>
       <div  className="rounded-md bg-gray-100 p-5 drop-shadow-xl mb-8">
-          <p className="font-bold text-4xl my-1 mb-5 pt-3">Purpose of useEffect other than fetching data.</p>
-          <p className="font-semibold text-gray-800 text-xl my-2">
+          <p className="font-bold text-4xl my-1 mb-5 pt-3">What is the purpose of useEffect other than fetching data?</p>
+          <p className="font-semibold text-zinc-800 text-xl my-2">
             1. Updating the document title: You can use the useEffect hook to update the document title when the component
             mounts or when the state changes. 2. Setting up event listeners: You can use the useEffect hook to set up event
             listeners when the component mounts and remove them when it unmounts. 3. Managing subscriptions: You can use the
@@ -41,7 +41,7 @@ const Blog = () => {
       </div>
       <div  className="rounded-md bg-gray-100 p-5 drop-shadow-xl mb-12">
           <p className="font-bold text-4xl my-1 mb-5 pt-3">How Does React work?</p>
-          <p className="font-semibold text-gray-800 text-xl my-2">
+          <p className="font-semibold text-zinc-800 text-xl my-2">
             React provides a powerful and efficient way to build user interfaces using components, a virtual DOM, state
             management, event handling, and a component lifecycle. By focusing on declarative programming, React makes it
             easier to build complex UIs that are easy to reason about and maintain.
