@@ -13,7 +13,7 @@ const LeftBody = ({ eU, handelWatchTime,handelBookmarks }) => {
             <div className="flex h-16 items-center">
               <img className="w-12 h-12 object-cover rounded-full ml-4" src={images.author_image} alt="image" />
               <div className=" mx-5">
-                <p className="font-bold text-2xl my-3">{author_name}</p>
+                <p className="font-bold text-xl md:text-2xl my-3">{author_name}</p>
                 <p className="text-gray-500 text-sm  font-semibold  mr-2">{publish_date}</p>
               </div>
             </div>
@@ -39,7 +39,7 @@ const LeftBody = ({ eU, handelWatchTime,handelBookmarks }) => {
             </div>
           </div>
           <div className="ml-4 cursor-default">
-            <p className="font-bold text-4xl my-1 mb-5 pt-3">{blog_title}</p>
+            <p className="font-bold text-2xl md:text-4xl my-1 mb-5 pt-3">{blog_title}</p>
             <span className="text-gray-500 text-sm underline font-semibold  mr-2">#biginners</span>{" "}
             <span className="text-gray-500 text-sm underline font-semibold p-3 mr-2">#programming</span> <br />
             <div className="my-3">

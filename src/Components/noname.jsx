@@ -5,12 +5,11 @@ const Noname = ({handelWatchTime, handelBookmarks}) => {
   
     const [user, setUser] = useState([]); 
     useEffect(()=>{
-        fetch("../../fakeJson.json")
+        fetch("fakeJson.json")
         .then(res => res.json())
         .then(data => setUser(data.data))
     },[]);
 
-    
 
     const fetchData = user.map(eU => 
         <LeftBody key={eU.id} eU={eU} handelWatchTime={handelWatchTime} handelBookmarks={handelBookmarks}></LeftBody>
