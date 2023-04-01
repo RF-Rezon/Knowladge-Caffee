@@ -2,13 +2,13 @@ import { useState } from 'react';
 import Nav from './Components/Nav';
 import RightBody from './Components/Right-Body';
 import Blog from './Components/blog';
-
 import Noname from './Components/noname';
 
 function App() {
 
   const [watchtime, setWatchtime] = useState("0"); 
-  const [count, setCount] = useState([]);
+  const [bookmark, setBookmark] = useState([]);
+ 
 
   const handelWatchTime =(time)=> {
 
@@ -23,8 +23,16 @@ function App() {
     }
   }
 
-    const handelBookmarks = () => {
-      setCount();
+    const handelBookmarks = (eU) => {
+      console.log(eU)
+      const exitId = bookmark.find(e=> e.id == eU.id);
+      if(exitId) {
+      return
+        alert("fsdfsfa");
+      }else{
+        let newBookMark = [...bookmark, eU];
+        setBookmark(newBookMark);
+      }
     };
   
   return (
@@ -34,7 +42,7 @@ function App() {
      <div className='flex flex-col md:flex-row'>
      <Noname  handelWatchTime={handelWatchTime} handelBookmarks={handelBookmarks}/>   
      {/* Dynamic Left body */}
-     <RightBody watchtime={watchtime} count={count}/>
+     <RightBody watchtime={watchtime} bookmark={bookmark}/>
      </div>
      <Blog/>
     </div>

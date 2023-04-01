@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import LeftBody from './Left-Body';
 
 const Noname = ({handelWatchTime, handelBookmarks}) => {
+  
     const [user, setUser] = useState([]); 
     useEffect(()=>{
         fetch("../../fakeJson.json")
