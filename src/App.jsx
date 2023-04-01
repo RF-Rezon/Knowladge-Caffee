@@ -1,11 +1,13 @@
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Nav from './Components/Nav';
 import RightBody from './Components/Right-Body';
 import Blog from './Components/blog';
 import Noname from './Components/noname';
 
 function App() {
-
+  
   const [watchtime, setWatchtime] = useState("0"); 
   const [bookmark, setBookmark] = useState([]);
  
@@ -24,11 +26,10 @@ function App() {
   }
 
     const handelBookmarks = (eU) => {
-      console.log(eU)
       const exitId = bookmark.find(e=> e.id == eU.id);
-      if(exitId) {
-      return
-        alert("fsdfsfa");
+     
+      if(exitId) { 
+        {toast("You Have Already Bookmarked This Blog")} 
       }else{
         let newBookMark = [...bookmark, eU];
         setBookmark(newBookMark);
@@ -45,6 +46,7 @@ function App() {
      <RightBody watchtime={watchtime} bookmark={bookmark}/>
      </div>
      <Blog/>
+     <ToastContainer></ToastContainer>
     </div>
   )
   }
