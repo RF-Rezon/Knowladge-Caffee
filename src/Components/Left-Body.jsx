@@ -21,7 +21,7 @@ const LeftBody = ({ eU, handelWatchTime,handelBookmarks }) => {
               <span className="text-gray-500 text-base font-normal p-1 mr-2">{read_time} mins read</span>
 
               <svg
-                onClick={()=> handelBookmarks(blog_title)}
+                onClick={handelBookmarks}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
